@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> All Products-Variety Store</title>
+    <LInk rel="STYLESHEET" href="Style.css"></LInk>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+ 
+
+  
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+               <a href="index.html"> <img src="imags/variety-logo-on-yellow.jpg" width="125px""></a>
+            </div>
+            <nav>
+                <ul id="menuitems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="PRODUCTS.HTML">Products</a></li>
+                    <li><a href="account.html">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                  
+                </ul> 
+            </nav>
+            <a href="cart.html"><img src="imags/cart.png" width="30px" height="30px" ></a>
+            <img src="imags/menu.png" class="menu-icon" onclick="menutoggle()" >
+                </div>
+             
+    </div>
+ <!-----account-page------>
+ <div class="account-page">
+     <div class="container">
+         <div class="row">
+             <div class="col-2">
+                 <img src="imags/image1.png" width="100%">
+             </div>
+             <div class="col-2">
+              <div class="form-container">
+                  <div class="form-btn">
+                      <span onclick="login()">Login</span>
+                      <span  onclick="register()">Register</span>
+                      <HR id="Indicator"></HR>
+                  </div>
+                  <form id="LoginForm">
+                      <input type="text" placeholder="UserName">
+                      <input type="password" placeholder="password">
+                      <button type="submit" class="btn">Login</button>
+                      <a href="">Forgot password</a>
+                  </form>
+                  <form id="RegForm">
+                    <input type="text" placeholder="UserName">
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="password">
+                    <button type="submit" class="btn">Register</button>
+                   
+                </form>
+              </div>
+            </div>
+         </div>
+     </div>
+ </div>
+  
+<!-------Footer------->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and ios mobile phone.</p>
+                <div class="app-logo">
+                    <img src="imags/play-store.png" >
+                    <img src="imags/app-store.png" >
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="imags/white.png" width="120px">
+                <p>Our Purpose Is To  Sustainably  Make the Pleasure and Benefits of sports Accessible to the Many.</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+              <ul>
+                  <li>Coupons</li>
+                  <li>Blog post </li>
+                  <li>Return Policy </li>
+                  <li>Join Affiliate</li>  
+              </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow Us </h3>
+              <ul>
+                 <li>Facebook</li>
+                  <li>Twitter </li>
+                  <li>Instagram </li>
+                  <li>YouTube</li>  
+              </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="Copyright">Copyright-2020 Abdul Haq</p>
+    </div>
+</div>
+<!-----js for toggle menu------>
+<script>
+    var menuitems = document.getElementById(" menuitems");
+    menuitems.style.maxHeight = "0px";
+    function menutoggle(){
+        if(  menuitems.style.maxHeight == "0px";){
+            menuitems.style.maxHeight = "200px";
+        }
+        else
+        {
+            menuitems.style.maxHeight = "0px";
+        }
+    }
+</script>
+
+<!-----js for toggle form------>
+<script>
+    var LoginForm = document.getElementById("LoginForm");
+    var RegForm = document.getElementById("RegForm");
+    var Indicator = document.getElementById("Indicator");
+    function register(){
+        RegForm.style.transform =  "translateX(0px)";
+        LoginForm.style.transform =  "translateX(0px)";
+        Indicator.style.transform =  "translateX(100px)";
+    }
+    function login(){
+        RegForm.style.transform =  "translateX(300px)";
+        LoginForm.style.transform =  "translateX(300px)";
+        Indicator.style.transform =  "translateX(0px)";
+    }
+    
+</script>
+<SCRipt>
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["Username"])) {
+    $UsernameErr = "UserName is required";
+  } else {
+    $Username = test_input($_POST["Username"]);
+    // check if name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$Username)) {
+      $UsernameErr = "Only letters and white space allowed";
+    }
+  }
+  
+  if (empty($_POST["email"])) {
+    $emailErr = "Email is required";
+  } else {
+    $email = test_input($_POST["email"]);
+    // check if e-mail address is well-formed
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      $emailErr = "Invalid email format";
+    }
+  }
+</SCRipt>
+</body>
+</html>

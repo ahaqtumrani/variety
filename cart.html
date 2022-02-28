@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> All Products-Variety Store</title>
+    <LInk rel="STYLESHEET" href="Style.css"></LInk>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+ 
+
+  
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+               <a href="index.html"> <img src="imags/variety-logo-on-yellow.jpg" width="125px""></a>
+            </div>
+            <nav>
+                <ul id="menuitems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="PRODUCTS.HTML">Products</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="account.html">About</a></li>
+                    <li><a href="about.html">Account</a></li>
+                </ul> 
+            </nav>
+            <img src="imags/cart.png" width="30px" height="30px" >
+            <img src="imags/menu.png" class="menu-icon" onclick="menutoggle()" >
+                </div>
+             
+    </div>
+ <!-----Cart items details------->
+<div class="small-container cart-page">
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th> 
+            <th>Subtotal</th>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="imags/buy-1.jpg" >
+                    <div>
+                        <p>Red Printed T-Shirt</p>
+                        <small>Price: 2100 RS</small>
+                        <br>
+                        <a href=""> Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>2100 RS </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="imags/buy-2.jpg" >
+                    <div>
+                        <p>Red Printed T-Shirt</p>
+                        <small>Price: 2500 RS</small>
+                        <br>
+                        <a href=""> Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>2100 RS </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="imags/buy-3.jpg" >
+                    <div>
+                        <p>Red Printed T-Shirt</p>
+                        <small>Price: 3000 RS</small>
+                        <br>
+                        <a href=""> Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td> 3000 RS </td>
+        </tr>
+    </table>
+
+<div class="total-price">
+    <table>
+        <tr>
+            <td>Subtotal</td>
+            <td>7600 RS</td>
+        </tr>
+        <tr>
+            <td>Tax</td>
+            <td>500 RS</td>
+        </tr>
+        <tr>
+            <td>Total</td>
+            <td>8100 RS</td>
+        </tr>
+    </table>
+</div>
+
+</div>
+
+
+  
+<!-------Footer------->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and ios mobile phone.</p>
+                <div class="app-logo">
+                    <img src="imags/play-store.png" >
+                    <img src="imags/app-store.png" >
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="imags/white.png" width="120px">
+                <p>Our Purpose Is To  Sustainably  Make the Pleasure and Benefits of sports Accessible to the Many.</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+              <ul>
+                  <li>Coupons</li>
+                  <li>Blog post </li>
+                  <li>Return Policy </li>
+                  <li>Join Affiliate</li>  
+              </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow Us </h3>
+              <ul>
+                 <li>Facebook</li>
+                  <li>Twitter </li>
+                  <li>Instagram </li>
+                  <li>YouTube</li>  
+              </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="Copyright">Copyright-2020 Abdul Haq</p>
+    </div>
+</div>
+<!-----js for toggle menu------>
+<script>
+    var menuitems = document.getElementById(" menuitems");
+    menuitems.style.maxHeight = "0px";
+    function menutoggle(){
+        if(  menuitems.style.maxHeight == "0px";){
+            menuitems.style.maxHeight = "200px";
+        }
+        else
+        {
+            menuitems.style.maxHeight = "0px";
+        }
+    }
+</script>
+
+</body>
+</html>
